@@ -1,3 +1,12 @@
 from django.test import TestCase
+from django.test.client import Client
 
-# Create your tests here.
+
+class HomeViewTest(TestCase):
+
+    def test_gets_home_page(self):
+        client = Client()
+        response = client.get('/')
+        self.assertEqual(200, response.status_code)
+        templates = [template.name for template in response.templates]
+        self.assertIn('home/index.html', templates)
