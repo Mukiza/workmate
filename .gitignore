@@ -1,0 +1,6 @@
+*.pyc
+*.swp
+*.swpo
+.DS_Store
+db.sqlite3
+ghostdriver.log
