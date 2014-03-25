@@ -15,4 +15,4 @@ def and_i_visit_the_home_page(step):
 
 @step(u'Then I should see the welcome text')
 def then_i_should_see_the_welcome_text(step):
-    world.page.is_text_present("Welcome to workmate")
+    world.page.is_text_present("Workers")
